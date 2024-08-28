@@ -1,0 +1,8 @@
+# Resourceにkeyvaultと入っているデータの探すKQL
+search '*keyvault*'
+| top 1000 by Resource
+
+# AzureDiagnosticに特定のリソースプロバイダーのデータを取得するKQL
+AzureDiagnostics
+| where ResourceProvider == 'MICROSOFT.KEYVAULT'
+
