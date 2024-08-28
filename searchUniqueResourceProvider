@@ -1,0 +1,5 @@
+# 指定のテーブルに入っているユニークなリソースを調べるKQL
+
+AzureDiagnostics
+| summarize by ResourceProvider
+| project ResourceProvider
