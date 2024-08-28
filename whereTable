@@ -1,0 +1,6 @@
+#どのテーブルにデータが入っているかを調べるKQL
+
+search *
+| where TimeGenereted > ago (180d)
+| where _ResouceId =~ "<resourceID>"
+| summarize max(TimeGenerated) by _ResourceId, $table
