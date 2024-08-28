@@ -1,0 +1,5 @@
+# Diny/Allowを調べる際の参考クエリ
+
+AzureNetworkAnalytics_CL
+| where SubType_s == "FlowLog"
+| project FlowStartTime_t, FlowEndTime_t, SrcIP_s, SrcPublicIPs_s, DestIP_s, DestPublicIPs_s, FlowStatus_s, NSGRule_s
